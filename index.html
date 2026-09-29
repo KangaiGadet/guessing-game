@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guessing Game</title>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<nav><div class="wrap nav"><div class="brand">🎯 Guessing Game</div><div class="links">
+<button class="navbtn active" data-go="home">Home</button><button class="navbtn" data-go="number">🔢 Numbers</button><button class="navbtn" data-go="word">🔤 Words</button><button class="navbtn" data-go="settings">⚙️ Settings</button>
+</div></div></nav>
+<main class="wrap">
+<section id="home" class="screen active"><div class="hero"><div class="heroicon">🎮</div><h1>Guessing Game</h1><p>Choose your challenge, use your clues, and beat the attempt limit.</p><div class="cards">
+<button class="card number" data-go="number"><div class="icon">🔢</div><h3>Guess the Number</h3><p>Easy 1–50, Medium 1–1,000, or Hard 1–1,000,000 with number clues.</p><strong>Play Numbers →</strong></button>
+<button class="card word" data-go="word"><div class="icon">🔤</div><h3>Guess the Word</h3><p>Reveal letters and discover the hidden word or phrase before your attempts run out.</p><strong>Play Words →</strong></button>
+</div></div></section>
+
+<section id="number" class="screen"><div class="panel"><div class="head"><div><h2>🔢 Guess the Number</h2><small class="muted">Choose wisely — attempts are limited.</small></div><button class="btn" data-go="home">← Home</button></div>
+<div class="diffs"><button class="diff easy" data-nd="1">🟢 Easy<br><small>1–50 · 4 attempts</small></button><button class="diff medium" data-nd="2">🟡 Medium<br><small>1–1,000 · 8 attempts</small></button><button class="diff hard" data-nd="3">🔴 Hard<br><small>1–1,000,000 · 12 attempts</small></button></div>
+<div class="stats"><div class="stat"><span>Range</span><strong id="nr">—</strong></div><div class="stat"><span>Attempts</span><strong id="na">—</strong></div><div class="stat"><span>Remaining</span><strong id="nrem">—</strong></div></div>
+<div id="nh" class="hints">Choose a difficulty to start.</div><form id="nf"><input id="ni" type="number" placeholder="Enter your guess" disabled><div class="actions"><button class="btn primary" disabled id="ng">Guess</button><button class="btn" type="button" id="nn">New Round</button></div></form><div id="nm" class="message">Your result appears here.</div></div></section>
+
+<section id="word" class="screen"><div class="panel"><div class="head"><div><h2>🔤 Guess the Word</h2><small class="muted">Find the answer before your attempts run out.</small></div><button class="btn" data-go="home">← Home</button></div>
+<div class="diffs"><button class="diff easy" data-wd="1">🟢 Easy<br><small>1 word · 6 attempts</small></button><button class="diff medium" data-wd="2">🟡 Medium<br><small>2 words · 12 attempts</small></button><button class="diff hard" data-wd="3">🔴 Hard<br><small>3 words · 18 attempts</small></button></div>
+<div class="stats"><div class="stat"><span>Words</span><strong id="wc">—</strong></div><div class="stat"><span>Attempts</span><strong id="wa">—</strong></div><div class="stat"><span>Remaining</span><strong id="wr">—</strong></div></div>
+<div id="wh" class="hints">Choose a difficulty to start.</div><div id="hearts" class="hearts">❤️</div><div id="wd" class="worddisplay">— — —</div>
+<form id="wf"><input id="wi" autocomplete="off" placeholder="Enter your guess" disabled><div class="actions"><button class="btn success" disabled id="wg">Guess</button><button class="btn" type="button" id="wn">New Round</button></div></form><div id="wm" class="message">Your result appears here.</div></div></section>
+
+<section id="settings" class="screen"><div class="panel"><div class="head"><div><h2>⚙️ Settings</h2><small class="muted">Audio controls</small></div><button class="btn" data-go="home">← Home</button></div>
+<div class="row"><div><b>Sound Effects</b><div class="muted">Clicks, correct, wrong and game-over sounds.</div></div><button class="btn" id="sfx">ON</button></div>
+<div class="row"><div><b>Background Music</b><div class="muted">Reserved for your future music file.</div></div><button class="btn" disabled>Pending</button></div>
+<div class="music"><b>🎵</b><h3>Music Section — Pending</h3><p>Leave this empty for now. Later you can add your chosen track here.</p><code>assets/music/your-song.mp3</code></div></div></section>
+</main><footer>🎯 Guessing Game · Numbers & Words</footer>
+<script src="js/script.js"></script>
+
+</body></html>
